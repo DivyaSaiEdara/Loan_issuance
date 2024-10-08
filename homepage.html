@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* Ensure the full height of the body */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background settings */
+        body {
+            background-image: url('images/background.jpg'); /* Set the background image */
+            background-size: cover; /* Ensure the background image covers the entire screen */
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #333; /* Default text color */
+        }
+
+         /* Navbar settings */
+         .navbar {
+            background-color: #f48fb1; /* Soft pink background color for the navbar */
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000; /* Keeps the navbar on top of other elements */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
+        }
+
+        /* Logo styling */
+        .navbar .logo {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            height: 50px; /* Adjust logo size */
+        }
+
+        /* Navbar links */
+        .navbar a {
+            display: inline-block;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #c2185b; /* Darker pink when hovering */
+            color: white;
+        }
+
+
+        /* Dashboard content */
+        .content {
+            padding: 120px 20px; /* Push content below navbar */
+            max-width: 800px;
+            margin: 0 auto; /* Center align content */
+            text-align: center; /* Center text */
+        }
+
+        h1 {
+            color: #8e24aa; /* Title color */
+        }
+
+        .option {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for options */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            cursor: pointer; /* Pointer on hover */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+
+        .option:hover {
+            background-color: #e1bee7; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <img src="images/logo.png" alt="Logo" class="logo"> <!-- Logo in the corner -->
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="content">
+        <h1>Dashboard</h1>
+        <div class="option" onclick="location.href='LenderHomepage.html'">Lender</div>
+        <div class="option" onclick="location.href='BorrowerHomepage.html'">Borrower</div>
+        <div class="option" onclick="location.href='AdminHomepage.html'">Admin</div>
+        <div class="option" onclick="location.href='FinancialAnalystHomepage.html'">Financial Analyst</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Ensure the full height of the body */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background settings */
+        body {
+            background-image: url('images/background.jpg'); /* Set the background image */
+            background-size: cover; /* Ensure the background image covers the entire screen */
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Navbar settings */
+        .navbar {
+            background-color: #f48fb1; /* Soft pink background color for the navbar */
+            padding: 20px 0;
+            text-align: center;
+            position: fixed; /* Fixed position */
+            width: 100%;
+            top: 0;
+            z-index: 1000; /* Keeps the navbar on top of other elements */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
+        }
+
+        /* Logo styling */
+        .navbar .logo {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            height: 50px; /* Adjust logo size */
+        }
+
+        /* Navbar links */
+        .navbar a {
+            display: inline-block;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #c2185b; /* Darker pink when hovering */
+            color: white;
+        }
+
+
+        /* Login container */
+        .container {
+            width: 450px;
+            margin: 100px auto; /* Centered and pushed down from the navbar */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.722); /* Slight transparency */
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333; /* Heading color */
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green submit button */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            text-align: center; /* Center align error messages */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <img src="images/logo.png" alt="Logo" class="logo"> <!-- Logo in the corner -->
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html" class="active">Login</a>
+        <a href="homepage.html">Homepage</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+
+    <!-- Login Container -->
+    <div class="container">
+        <h2>Login</h2>
+        <form action="LoginServlet" method="post"> <!-- Adjust action as needed -->
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <div class="error" id="loginError"></div> <!-- Placeholder for login error messages -->
+    </div>
+
+    <script>
+        // Example JavaScript to handle dynamic error messages (optional)
+        const urlParams = new URLSearchParams(window.location.search);
+        const loginError = urlParams.get('loginError');
+        if (loginError) {
+            document.getElementById('loginError').textContent = loginError;
+        }
+    </script>
+</body>
+</html>

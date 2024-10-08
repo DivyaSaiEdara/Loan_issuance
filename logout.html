@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+        /* Ensure the full height of the body */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background settings */
+        body {
+            background-image: url('images/background.jpg'); /* Set the background image */
+            background-size: cover; /* Ensure the background image covers the entire screen */
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Navbar settings */
+        .navbar {
+            background-color: #f48fb1; /* Soft pink background color for the navbar */
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000; /* Keeps the navbar on top of other elements */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
+        }
+
+        /* Logo styling */
+        .navbar .logo {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            height: 50px; /* Adjust logo size */
+        }
+
+        /* Navbar links */
+        .navbar a {
+            display: inline-block;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #c2185b; /* Darker pink when hovering */
+            color: white;
+        }
+
+        /* Logout section */
+        .logout-message {
+            text-align: center;
+            padding: 120px 50px; /* Push content below navbar */
+            color: #fff; /* Change text color for contrast */
+            margin-top: 80px; /* Space to account for the fixed navbar */
+        }
+
+        .logout-message h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .logout-message p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .logout-message a {
+            color: #242624; /* Green color for the link */
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <img src="images/logo.png" alt="Logo" class="logo"> <!-- Logo in the corner -->
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+
+    <!-- Logout Message Section -->
+    <div class="logout-message">
+        <h1>You have been logged out</h1>
+        <p>Thank you for using our service. We hope to see you again soon!</p>
+        <p><a href="login.html">Click here to login again</a></p>
+    </div>
+</body>
+</html>
